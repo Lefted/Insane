@@ -1,0 +1,22 @@
+package me.sixteen_.insane.module.modules.render;
+
+import me.sixteen_.insane.module.Module;
+import me.sixteen_.insane.module.ModuleCategory;
+
+public class Fullbright extends Module {
+
+	private float previousGamma = -1.0F;
+	
+	public Fullbright() {
+		super("Fullbright", ModuleCategory.RENDER);
+	}
+	
+	@Override
+	public void onEnable() {
+		previousGamma = -1.0F;
+	}
+	
+	public void onDisable() {
+		
+	}
+}
