@@ -13,6 +13,6 @@
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="net.fabricmc.devlaunchinjector.Main"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="Insane"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Insane"/>
-    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dfabric.dli.config=D:\code\Insane\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=client -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotClient"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dfabric.dli.config=C:\Users\Steff\git\Insane\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=client -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotClient"/>
     <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:Insane}/run"/>
 </launchConfiguration>
