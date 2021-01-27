@@ -19,7 +19,6 @@ public class ArrayList extends Module {
 	private List<Module> modules;
 	private MinecraftClient mc;
 	private TextRenderer tr;
-	private int width;
 
 	public ArrayList() {
 		super("ArrayList", ModuleCategory.RENDER, false);
@@ -46,7 +45,6 @@ public class ArrayList extends Module {
 		mc = MinecraftClient.getInstance();
 		modules = Insane.getInsane().getModuleManager().getModules();
 		tr = mc.textRenderer;
-		width = mc.currentScreen.width;
 		sortModules();
 	}
 
