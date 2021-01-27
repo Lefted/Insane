@@ -37,6 +37,6 @@ public class SprintStatus extends Module {
 			status = "Disabled";
 		}
 		status = String.format("[Sprinting (%s)]", status);
-		tr.draw(matrices, status, 0, 2, -1);
+		tr.draw(matrices, status, 2, 2, -1);
 	}
 }
