@@ -25,7 +25,7 @@ public class SprintStatus extends Module {
 	}
 
 	@Override
-	public void render(MatrixStack matrices) {
+	public void render(final MatrixStack matrices) {
 		String status;
 		if (mc.options.sprintToggled && mc.options.keySprint.isPressed()) {
 			status = "Toggled";

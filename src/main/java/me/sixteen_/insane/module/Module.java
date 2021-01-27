@@ -12,14 +12,14 @@ public abstract class Module {
 	private final boolean visible;
 	private boolean enabled;
 
-	public Module(String moduleName, ModuleCategory moduleCategory) {
-		this.visible = true;
+	public Module(final String moduleName, final ModuleCategory moduleCategory) {
+		visible = true;
 		enabled = false;
 		category = moduleCategory;
 		name = moduleName;
 	}
 
-	public Module(String moduleName, ModuleCategory moduleCategory, boolean visible) {
+	public Module(final String moduleName, final ModuleCategory moduleCategory, final boolean visible) {
 		this.visible = visible;
 		enabled = false;
 		category = moduleCategory;
@@ -51,7 +51,7 @@ public abstract class Module {
 		return visible;
 	}
 	
-	public void render(MatrixStack matrices) {
+	public void render(final MatrixStack matrices) {
 	}
 
 	protected void onEnable() {

@@ -17,7 +17,7 @@ public class ToggleCommand extends Command {
 	}
 
 	@Override
-	public void runCommand(String... param) {
+	public void runCommand(final String... param) {
 		mm = Insane.getInsane().getModuleManager();
 		Module m = mm.getModuleByName(param[1]);
 		m.toggle();

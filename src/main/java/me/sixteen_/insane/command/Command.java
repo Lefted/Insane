@@ -11,7 +11,7 @@ public abstract class Command {
 		this.name = name;
 	}
 
-	public abstract void runCommand(String... param);
+	public abstract void runCommand(final String... param);
 
 	public String getName() {
 		return name;

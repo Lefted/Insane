@@ -19,7 +19,7 @@ public class ModuleManager {
 		addModule(new ArrayList());
 	}
 
-	private void addModule(Module module) {
+	private void addModule(final Module module) {
 		modules.add(module);
 	}
 
@@ -27,8 +27,8 @@ public class ModuleManager {
 		return modules;
 	}
 
-	public Module getModuleByName(String moduleName) {
-		for (Module m : modules) {
+	public Module getModuleByName(final String moduleName) {
+		for (final Module m : modules) {
 			if (m.getName().equalsIgnoreCase(moduleName)) {
 				return m;
 			}
@@ -36,8 +36,8 @@ public class ModuleManager {
 		return null;
 	}
 
-	public Module getModule(Class<? extends Module> moduleClass) {
-		for (Module m : modules) {
+	public Module getModule(final Class<? extends Module> moduleClass) {
+		for (final Module m : modules) {
 			if (m.getClass() == moduleClass) {
 				return m;
 			}

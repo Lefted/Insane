@@ -16,7 +16,7 @@ public class CommandManager {
 		addCommand(new ToggleCommand());
 	}
 
-	private void addCommand(Command cmd) {
+	private void addCommand(final Command cmd) {
 		commands.add(cmd);
 	}
 
@@ -26,7 +26,7 @@ public class CommandManager {
 		runCommand(cmd);
 	}
 
-	private void runCommand(String... cmd) {
+	private void runCommand(final String... cmd) {
 		for (Command c : commands) {
 			if (c.getName().equalsIgnoreCase(cmd[0])) {
 				try {

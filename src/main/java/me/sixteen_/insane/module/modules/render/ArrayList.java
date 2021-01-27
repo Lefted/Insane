@@ -28,7 +28,7 @@ public class ArrayList extends Module {
 		Collections.sort(modules, new Comparator<Module>() {
 
 			@Override
-			public int compare(Module m1, Module m2) {
+			public int compare(final Module m1, final Module m2) {
 				if (tr.getWidth(m1.getName()) > tr.getWidth(m2.getName())) {
 					return -1;
 				}
@@ -49,7 +49,7 @@ public class ArrayList extends Module {
 	}
 
 	@Override
-	public void render(MatrixStack matrices) {
+	public void render(final MatrixStack matrices) {
 		int h = 0;
 		for (Module m : modules) {
 			if (m.isEnabled() && m.isVisible()) {
