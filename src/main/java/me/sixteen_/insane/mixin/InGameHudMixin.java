@@ -10,13 +10,16 @@ import me.sixteen_.insane.module.modules.render.ArrayList;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.client.util.math.MatrixStack;
 
+/**
+ * @author 16_
+ */
 @Mixin(InGameHud.class)
 public class InGameHudMixin {
-	
+
 	@Inject(method = "render", at = @At("HEAD"))
 	public void render(MatrixStack matrices, float tickDelta, CallbackInfo info) {
 		if (Insane.getInsane().getModuleManager().getModule(ArrayList.class).isEnabled()) {
-			((ArrayList)Insane.getInsane().getModuleManager().getModule(ArrayList.class)).render(matrices);
+			((ArrayList) Insane.getInsane().getModuleManager().getModule(ArrayList.class)).render(matrices);
 		}
 	}
 }

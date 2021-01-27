@@ -1,11 +1,14 @@
 package me.sixteen_.insane.module;
 
+/**
+ * @author 16_
+ */
 public abstract class Module {
 	
 	private final ModuleCategory category;
 	private final String name;
 	private boolean enabled;
-	
+
 	public Module(String moduleName, ModuleCategory moduleCategory) {
 		enabled = false;
 		category = moduleCategory;
@@ -20,19 +23,22 @@ public abstract class Module {
 			onDisable();
 		}
 	}
-	
+
 	public ModuleCategory getCategory() {
 		return category;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
-	
+
 	public boolean isEnabled() {
 		return enabled;
 	}
-	
-	public void onEnable() {}
-	public void onDisable() {}
+
+	public void onEnable() {
+	}
+
+	public void onDisable() {
+	}
 }

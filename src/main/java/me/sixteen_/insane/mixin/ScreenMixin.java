@@ -8,9 +8,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import me.sixteen_.insane.Insane;
 import net.minecraft.client.gui.screen.Screen;
 
+/**
+ * @author 16_
+ */
 @Mixin(Screen.class)
 public class ScreenMixin {
-	
+
 	@Inject(method = "sendMessage(Ljava/lang/String;Z)V", at = @At("HEAD"))
 	public void sendMessage(String message, boolean toHud, CallbackInfo info) {
 		if (message.startsWith(".")) {

@@ -7,13 +7,13 @@ import me.sixteen_.insane.module.ModuleManager;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.MinecraftClient;
 
+/**
+ * @author 16_
+ */
 public class Insane implements ModInitializer {
-	
+
 	// Instance
 	private static Insane insane;
-	
-	// Minecraft
-	private MinecraftClient mc;
 	
 	// Client information
 	private String clientName;
@@ -26,51 +26,46 @@ public class Insane implements ModInitializer {
 	// Managers
 	private ModuleManager moduleManager;
 	private CommandManager commandManager;
-	
+
 	@Override
 	public void onInitialize() {
 		insane = new Insane();
 	}
-	
+
 	public Insane() {
-		mc = MinecraftClient.getInstance();
 		moduleManager = new ModuleManager();
 		commandManager = new CommandManager();
 		clientColor = new Color(20, 20, 20, 191);
-		clientAccentColor = new Color (255, 85, 255, 191);
+		clientAccentColor = new Color(255, 85, 255, 191);
 		clientName = "Insane";
 		clientVersion = "b1";
 	}
-	
+
 	public String getClientName() {
 		return clientName;
 	}
-	
+
 	public String getClientVersion() {
 		return clientVersion;
 	}
-	
+
 	public Color getClientColor() {
 		return clientColor;
 	}
-	
+
 	public Color getClientAccentColor() {
 		return clientAccentColor;
 	}
-	
+
 	public ModuleManager getModuleManager() {
 		return moduleManager;
 	}
-	
+
 	public CommandManager getCommandManager() {
 		return commandManager;
 	}
-	
+
 	public static Insane getInsane() {
 		return insane;
-	}
-	
-	public MinecraftClient getMinecraft() {
-		return mc;
 	}
 }

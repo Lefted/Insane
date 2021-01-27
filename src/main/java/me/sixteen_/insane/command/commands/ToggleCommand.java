@@ -5,7 +5,11 @@ import me.sixteen_.insane.command.Command;
 import me.sixteen_.insane.module.Module;
 import me.sixteen_.insane.module.ModuleManager;
 
+/**
+ * @author 16_
+ */
 public class ToggleCommand extends Command {
+
 	private ModuleManager mm;
 
 	public ToggleCommand() {

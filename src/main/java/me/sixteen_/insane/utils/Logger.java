@@ -5,13 +5,20 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.network.MessageType;
 import net.minecraft.text.LiteralText;
 
+/**
+ * @author 16_
+ */
 public class Logger {
-	
-	public static final Logger LOGGER = new Logger();
+
+	private static final Logger LOGGER = new Logger();
 	private final MinecraftClient mc = MinecraftClient.getInstance();
 	private final Insane insane = Insane.getInsane();
-	
+
 	public void addChatMessage(String message) {
-		mc.inGameHud.addChatMessage(MessageType.SYSTEM, new LiteralText(String.format("%s : %s",  insane.getClientName(), message)), mc.player.getUuid());
+		mc.inGameHud.addChatMessage(MessageType.SYSTEM, new LiteralText(String.format("%s : %s", insane.getClientName(), message)), mc.player.getUuid());
+	}
+
+	public static Logger getLogger() {
+		return LOGGER;
 	}
 }
