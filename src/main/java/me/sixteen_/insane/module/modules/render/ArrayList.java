@@ -50,11 +50,12 @@ public class ArrayList extends Module {
 		sortModules();
 	}
 
+	@Override
 	public void render(MatrixStack matrices) {
 		int h = 0;
 		for (Module m : modules) {
 			if (m.isEnabled() && m.isVisible()) {
-				tr.draw(matrices, m.getName(), mc.getWindow().getScaledWidth() - tr.getWidth(m.getName()), h * tr.fontHeight + 2, -1);
+				tr.draw(matrices, m.getName(), mc.getWindow().getScaledWidth() - tr.getWidth(m.getName()) - 2, h * tr.fontHeight + 2, -1);
 				h++;
 			}
 		}
