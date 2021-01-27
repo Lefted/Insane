@@ -2,7 +2,6 @@ package me.sixteen_.insane.module.modules.render;
 
 import me.sixteen_.insane.module.Module;
 import me.sixteen_.insane.module.ModuleCategory;
-import net.minecraft.client.Keyboard;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.util.math.MatrixStack;
@@ -30,6 +29,8 @@ public class SprintStatus extends Module {
 		String status;
 		if (mc.options.sprintToggled && mc.options.keySprint.isPressed()) {
 			status = "Toggled";
+		} else if (mc.options.keySprint.isPressed()) {
+			status = "Key Held";
 		} else if (mc.player.isSprinting()) {
 			status = "Vanilla";
 		} else {
