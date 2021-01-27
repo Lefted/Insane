@@ -16,16 +16,16 @@ public class Insane implements ModInitializer {
 	private static Insane insane;
 	
 	// Client information
-	private String clientName;
-	private String clientVersion;
+	private final String clientName;
+	private final String clientVersion;
 	
 	// Client colors
-	private Color clientColor;
-	private Color clientAccentColor;
+	private final Color clientColor;
+	private final Color clientAccentColor;
 	
 	// Managers
-	private ModuleManager moduleManager;
-	private CommandManager commandManager;
+	private final ModuleManager moduleManager;
+	private final CommandManager commandManager;
 
 	@Override
 	public void onInitialize() {
