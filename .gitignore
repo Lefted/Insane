@@ -6,3 +6,7 @@
 /.project/
 /Insane_client.launch/
 /Insane_server.launch/
+/.classpath
+/.project
+/Insane_client.launch
+/Insane_server.launch
