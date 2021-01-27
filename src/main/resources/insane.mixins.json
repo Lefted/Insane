@@ -3,9 +3,10 @@
   "minVersion": "0.8",
   "package": "me.sixteen_.insane.mixin",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [
-  ],
+  "mixins": [],
   "client": [
+  	"InGameHudMixin",
+  	"ScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -13,7 +13,7 @@ import net.minecraft.client.util.math.MatrixStack;
 @Mixin(InGameHud.class)
 public class InGameHudMixin {
 	
-	@Inject(method = "render()", at = @At("HEAD"))
+	@Inject(method = "render", at = @At("HEAD"))
 	public void render(MatrixStack matrices, float tickDelta, CallbackInfo info) {
 		if (Insane.getInsane().getModuleManager().getModule(ArrayList.class).isEnabled()) {
 			((ArrayList)Insane.getInsane().getModuleManager().getModule(ArrayList.class)).render(matrices);

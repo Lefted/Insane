@@ -18,7 +18,7 @@ fullscreen:true
 bobView:false
 toggleCrouch:false
 toggleSprint:true
-mouseSensitivity:0.4
+mouseSensitivity:0.4000000059604645
 fov:0.625
 screenEffectScale:0.0
 fovEffectScale:0.0
@@ -56,7 +56,7 @@ chatScale:1.0
 chatWidth:1.0
 mipmapLevels:0
 useNativeTransport:true
-mainHand:left
+mainHand:right
 attackIndicator:1
 narrator:0
 tutorialStep:none
