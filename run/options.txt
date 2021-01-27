@@ -14,7 +14,7 @@ reducedDebugInfo:false
 snooperEnabled:false
 showSubtitles:true
 touchscreen:false
-fullscreen:true
+fullscreen:false
 bobView:false
 toggleCrouch:false
 toggleSprint:true
@@ -56,7 +56,7 @@ chatScale:1.0
 chatWidth:1.0
 mipmapLevels:0
 useNativeTransport:true
-mainHand:right
+mainHand:left
 attackIndicator:1
 narrator:0
 tutorialStep:none
