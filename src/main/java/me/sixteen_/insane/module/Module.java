@@ -1,5 +1,7 @@
 package me.sixteen_.insane.module;
 
+import net.minecraft.client.util.math.MatrixStack;
+
 /**
  * @author 16_
  */
@@ -32,6 +34,8 @@ public abstract class Module {
 			onDisable();
 		}
 	}
+	
+	public void render(MatrixStack matrices) {}
 
 	public ModuleCategory getCategory() {
 		return category;
