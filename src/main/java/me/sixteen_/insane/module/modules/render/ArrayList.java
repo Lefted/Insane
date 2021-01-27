@@ -22,7 +22,7 @@ public class ArrayList extends Module {
 	private int width;
 
 	public ArrayList() {
-		super("ArrayList", ModuleCategory.RENDER);
+		super("ArrayList", ModuleCategory.RENDER, false);
 	}
 
 	private void sortModules() {
@@ -53,7 +53,7 @@ public class ArrayList extends Module {
 	public void render(MatrixStack matrices) {
 		int h = 0;
 		for (Module m : modules) {
-			if (m.isEnabled()) {
+			if (m.isEnabled() && m.isVisible()) {
 				tr.draw(matrices, m.getName(), mc.getWindow().getScaledWidth() - tr.getWidth(m.getName()), h * tr.fontHeight + 2, -1);
 				h++;
 			}

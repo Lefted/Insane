@@ -7,9 +7,18 @@ public abstract class Module {
 	
 	private final ModuleCategory category;
 	private final String name;
+	private final boolean visible;
 	private boolean enabled;
-
+	
 	public Module(String moduleName, ModuleCategory moduleCategory) {
+		this.visible = true;
+		enabled = false;
+		category = moduleCategory;
+		name = moduleName;
+	}
+
+	public Module(String moduleName, ModuleCategory moduleCategory, boolean visible) {
+		this.visible = visible;
 		enabled = false;
 		category = moduleCategory;
 		name = moduleName;
@@ -34,6 +43,10 @@ public abstract class Module {
 
 	public boolean isEnabled() {
 		return enabled;
+	}
+	
+	public boolean isVisible() {
+		return visible;
 	}
 
 	public void onEnable() {
