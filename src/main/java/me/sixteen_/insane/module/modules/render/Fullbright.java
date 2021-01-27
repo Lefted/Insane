@@ -17,13 +17,14 @@ public class Fullbright extends Module {
 	}
 
 	@Override
-	public void onEnable() {
+	protected void onEnable() {
 		mc = MinecraftClient.getInstance();
 		previousGamma = mc.options.gamma;
 		mc.options.gamma = 69.0D;
 	}
 
-	public void onDisable() {
+	@Override
+	protected void onDisable() {
 		mc.options.gamma = previousGamma;
 	}
 }

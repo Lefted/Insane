@@ -6,12 +6,12 @@ import net.minecraft.client.util.math.MatrixStack;
  * @author 16_
  */
 public abstract class Module {
-	
+
 	private final ModuleCategory category;
 	private final String name;
 	private final boolean visible;
 	private boolean enabled;
-	
+
 	public Module(String moduleName, ModuleCategory moduleCategory) {
 		this.visible = true;
 		enabled = false;
@@ -34,8 +34,6 @@ public abstract class Module {
 			onDisable();
 		}
 	}
-	
-	public void render(MatrixStack matrices) {}
 
 	public ModuleCategory getCategory() {
 		return category;
@@ -48,14 +46,17 @@ public abstract class Module {
 	public boolean isEnabled() {
 		return enabled;
 	}
-	
+
 	public boolean isVisible() {
 		return visible;
 	}
-
-	public void onEnable() {
+	
+	public void render(MatrixStack matrices) {
 	}
 
-	public void onDisable() {
+	protected void onEnable() {
+	}
+
+	protected void onDisable() {
 	}
 }

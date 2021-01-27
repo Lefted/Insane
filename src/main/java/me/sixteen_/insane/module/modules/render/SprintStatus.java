@@ -19,7 +19,7 @@ public class SprintStatus extends Module {
 	}
 
 	@Override
-	public void onEnable() {
+	protected void onEnable() {
 		mc = MinecraftClient.getInstance();
 		tr = mc.textRenderer;
 	}

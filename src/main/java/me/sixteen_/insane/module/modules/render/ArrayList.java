@@ -42,7 +42,7 @@ public class ArrayList extends Module {
 	}
 
 	@Override
-	public void onEnable() {
+	protected void onEnable() {
 		mc = MinecraftClient.getInstance();
 		modules = Insane.getInsane().getModuleManager().getModules();
 		tr = mc.textRenderer;
