@@ -4,13 +4,11 @@ import java.awt.Color;
 
 import me.sixteen_.insane.command.CommandManager;
 import me.sixteen_.insane.module.ModuleManager;
-import net.fabricmc.api.ModInitializer;
-import net.minecraft.client.MinecraftClient;
 
 /**
  * @author 16_
  */
-public class Insane implements ModInitializer {
+public class Insane {
 
 	// Instance
 	private static Insane insane;
@@ -27,12 +25,8 @@ public class Insane implements ModInitializer {
 	private final ModuleManager moduleManager;
 	private final CommandManager commandManager;
 
-	@Override
-	public void onInitialize() {
-		insane = new Insane();
-	}
-
 	public Insane() {
+		insane = this;
 		moduleManager = new ModuleManager();
 		commandManager = new CommandManager();
 		clientColor = new Color(20, 20, 20, 191);

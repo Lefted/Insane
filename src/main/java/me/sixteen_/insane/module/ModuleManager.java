@@ -4,6 +4,7 @@ import java.util.List;
 
 import me.sixteen_.insane.module.modules.render.ArrayList;
 import me.sixteen_.insane.module.modules.render.Fullbright;
+import me.sixteen_.insane.module.modules.render.Inspect;
 import me.sixteen_.insane.module.modules.render.SprintStatus;
 
 /**
@@ -17,6 +18,7 @@ public class ModuleManager {
 		addModule(new SprintStatus());
 		addModule(new Fullbright());
 		addModule(new ArrayList());
+		addModule(new Inspect());
 	}
 
 	private void addModule(final Module module) {

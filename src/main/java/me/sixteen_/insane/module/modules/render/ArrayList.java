@@ -48,7 +48,6 @@ public class ArrayList extends Module {
 		sortModules();
 	}
 
-	@Override
 	public void render(final MatrixStack matrices) {
 		int h = 0;
 		for (Module m : modules) {

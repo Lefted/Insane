@@ -15,7 +15,7 @@ import net.minecraft.client.gui.screen.Screen;
 public class ScreenMixin {
 
 	@Inject(method = "sendMessage(Ljava/lang/String;Z)V", at = @At("HEAD"), cancellable = true)
-	public void sendMessage(String message, boolean toHud, CallbackInfo info) {
+	private void sendMessage(String message, boolean toHud, CallbackInfo info) {
 		if (message.startsWith(".")) {
 			Insane.getInsane().getCommandManager().commandInput(message);
 			info.cancel();

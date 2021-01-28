@@ -27,4 +27,9 @@ public class Fullbright extends Module {
 	protected void onDisable() {
 		mc.options.gamma = previousGamma;
 	}
+
+	@Override
+	protected void onShutdown() {
+		mc.options.gamma = previousGamma;
+	}
 }

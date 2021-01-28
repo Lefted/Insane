@@ -1,7 +1,5 @@
 package me.sixteen_.insane.module;
 
-import net.minecraft.client.util.math.MatrixStack;
-
 /**
  * @author 16_
  */
@@ -51,12 +49,12 @@ public abstract class Module {
 		return visible;
 	}
 	
-	public void render(final MatrixStack matrices) {
-	}
-
 	protected void onEnable() {
 	}
 
 	protected void onDisable() {
+	}
+	
+	protected void onShutdown() {
 	}
 }

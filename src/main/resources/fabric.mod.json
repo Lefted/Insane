@@ -18,9 +18,7 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "me.sixteen_.insane.Insane"
-    ]
+    "main": []
   },
   "mixins": [
     "insane.mixins.json"
