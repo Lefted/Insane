@@ -62,4 +62,8 @@ public class Insane {
 	public static Insane getInsane() {
 		return insane;
 	}
+	
+	public void shutdown() {
+		moduleManager.shutdown();
+	}
 }

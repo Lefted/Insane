@@ -46,4 +46,10 @@ public class ModuleManager {
 		}
 		return null;
 	}
+	
+	public void shutdown() {
+		for (Module m : modules) {
+			m.onShutdown();
+		}
+	}
 }
