@@ -1,5 +1,7 @@
 package me.sixteen_.insane.module;
 
+import net.minecraft.client.util.InputUtil;
+
 /**
  * @author 16_
  */
@@ -8,6 +10,7 @@ public abstract class Module {
 	private final ModuleCategory category;
 	private final String name;
 	private final boolean visible;
+	private InputUtil.Key keybind;
 	private boolean enabled;
 
 	public Module(final String moduleName, final ModuleCategory moduleCategory) {
@@ -15,6 +18,7 @@ public abstract class Module {
 		enabled = false;
 		category = moduleCategory;
 		name = moduleName;
+		keybind = InputUtil.UNKNOWN_KEY;
 	}
 
 	public Module(final String moduleName, final ModuleCategory moduleCategory, final boolean visible) {
@@ -22,6 +26,7 @@ public abstract class Module {
 		enabled = false;
 		category = moduleCategory;
 		name = moduleName;
+		keybind = InputUtil.UNKNOWN_KEY;
 	}
 
 	public void toggle() {
@@ -43,6 +48,14 @@ public abstract class Module {
 
 	public boolean isEnabled() {
 		return enabled;
+	}
+	
+	public void setKeybind(final InputUtil.Key key) {
+		keybind = key;
+	}
+	
+	public InputUtil.Key getKeybind() {
+		return keybind;
 	}
 
 	public boolean isVisible() {

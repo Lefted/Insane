@@ -2,6 +2,7 @@ package me.sixteen_.insane.command;
 
 import java.util.List;
 
+import me.sixteen_.insane.command.commands.BindCommand;
 import me.sixteen_.insane.command.commands.ToggleCommand;
 import me.sixteen_.insane.utils.Logger;
 
@@ -14,6 +15,7 @@ public class CommandManager {
 
 	public CommandManager() {
 		addCommand(new ToggleCommand());
+		addCommand(new BindCommand());
 	}
 
 	private void addCommand(final Command cmd) {
