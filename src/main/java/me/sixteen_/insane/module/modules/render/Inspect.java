@@ -27,7 +27,7 @@ public class Inspect extends Module {
 	}
 
 	public void render(final float swingProgress, final float equipProgress, final MatrixStack matrices) {
-		if (swingProgress == 0.0F && equipProgress == 0.0F) {
+		if (swingProgress == 0.0F && equipProgress == 0.0F && distance < 30.0F) {
 			distance += 0.005F;
 			float f = MathHelper.sin(distance);
 			rotate(matrices, 0.0F + (f / 48.0F), 1.8F, 1.8F);
