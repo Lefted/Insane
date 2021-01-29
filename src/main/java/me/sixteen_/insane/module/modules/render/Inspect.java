@@ -2,7 +2,6 @@ package me.sixteen_.insane.module.modules.render;
 
 import me.sixteen_.insane.module.Module;
 import me.sixteen_.insane.module.ModuleCategory;
-import me.sixteen_.insane.utils.Logger;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.util.math.MatrixStack;
