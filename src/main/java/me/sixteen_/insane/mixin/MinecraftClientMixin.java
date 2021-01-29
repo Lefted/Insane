@@ -18,9 +18,4 @@ public class MinecraftClientMixin {
 	private void init(final CallbackInfo info) {
 		new Insane();
 	}
-	
-	@Inject(method = "stop", at = @At("HEAD"))
-	private void stop(final CallbackInfo info) {
-		Insane.getInsane().shutdown();
-	}
 }
