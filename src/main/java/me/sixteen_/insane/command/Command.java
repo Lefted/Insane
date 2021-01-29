@@ -5,15 +5,15 @@ package me.sixteen_.insane.command;
  */
 public abstract class Command {
 
-	private final String name;
+	private final String[] name;
 
-	public Command(final String name) {
+	public Command(final String... name) {
 		this.name = name;
 	}
 
 	public abstract void runCommand(final String... param);
 
-	public String getName() {
+	public String[] getName() {
 		return name;
 	}
 }

@@ -29,11 +29,14 @@ public class CommandManager {
 
 	private void runCommand(final String... cmd) {
 		for (Command c : commands) {
-			if (c.getName().equalsIgnoreCase(cmd[0])) {
-				try {
-					c.runCommand(cmd);
-				} catch (Exception e) {
-					Logger.getLogger().addChatMessage("Could not run command!");
+			for (String name : c.getName()) {
+				if (name.equalsIgnoreCase(cmd[0])) {
+					try {
+						c.runCommand(cmd);
+					} catch (Exception e) {
+						Logger.getLogger().addChatMessage("Could not run command!");
+					}
+					return;
 				}
 			}
 		}

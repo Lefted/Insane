@@ -10,7 +10,7 @@ import me.sixteen_.insane.module.Module;
 public class ToggleCommand extends Command {
 
 	public ToggleCommand() {
-		super("t");
+		super("t", "toggle");
 	}
 
 	@Override
