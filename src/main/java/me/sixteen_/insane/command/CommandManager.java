@@ -22,9 +22,8 @@ public class CommandManager {
 		commands.add(cmd);
 	}
 
-	public void commandInput(String input) {
-		input = input.substring(1);
-		String[] cmd = input.split(" ");
+	public void commandInput(final String input) {
+		String[] cmd = input.substring(1).split(" ");
 		runCommand(cmd);
 	}
 
