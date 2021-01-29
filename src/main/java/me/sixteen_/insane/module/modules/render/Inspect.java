@@ -10,6 +10,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
 
+/**
+ * @author Steffen
+ */
 public class Inspect extends Module {
 
 	private float distance;
