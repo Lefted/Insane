@@ -15,12 +15,12 @@ import net.minecraft.client.MinecraftClient;
 public class MinecraftClientMixin {
 
 	@Inject(method = "<init>", at = @At("RETURN"))
-	private void init(CallbackInfo info) {
+	private void init(final CallbackInfo info) {
 		new Insane();
 	}
 	
 	@Inject(method = "stop", at = @At("HEAD"))
-	private void stop(CallbackInfo info) {
+	private void stop(final CallbackInfo info) {
 		Insane.getInsane().shutdown();
 	}
 }

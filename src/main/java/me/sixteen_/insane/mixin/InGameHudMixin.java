@@ -19,7 +19,7 @@ import net.minecraft.client.util.math.MatrixStack;
 public class InGameHudMixin {
 
 	@Inject(method = "render", at = @At("HEAD"))
-	private void render(MatrixStack matrices, float tickDelta, CallbackInfo info) {
+	private void render(MatrixStack matrices, float tickDelta, final CallbackInfo info) {
 		final ModuleManager mm = Insane.getInsane().getModuleManager();
 		final ArrayList arrayList = (ArrayList) mm.getModule(ArrayList.class);
 		final SprintStatus sprintStatus = (SprintStatus) mm.getModule(SprintStatus.class);
