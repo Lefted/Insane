@@ -26,16 +26,15 @@ public class Inspect extends Module {
 		distance = 0.0F;
 	}
 
-	public void render(final AbstractClientPlayerEntity player, final float tickDelta, final float pitch, final Hand hand, final float swingProgress, final ItemStack item,
-			final float equipProgress, final MatrixStack matrices, final VertexConsumerProvider vertexConsumers) {
-		if (swingProgress == 0.0F) {
+	public void render(final float swingProgress, final float equipProgress, final MatrixStack matrices) {
+		if (swingProgress == 0.0F && equipProgress == 0.0F) {
 			distance += 0.005F;
 			float f = MathHelper.sin(distance);
 			rotate(matrices, 0.0F + (f / 48.0F), 1.8F, 1.8F);
-//			rotate(matrices, -1.8F, 1.35F, 0.0F);
-//			rotate(matrices, 0.9F, -1.575F, 0.225F);
-//			rotate(matrices, -0.9F, 1.8F, 0.9F);
-//			rotate(matrices, -3.25F, 0.9F, -1.35F);
+/*			rotate(matrices, -1.8F, 1.35F, 0.0F);
+			rotate(matrices, 0.9F, -1.575F, 0.225F);
+			rotate(matrices, -0.9F, 1.8F, 0.9F);
+			rotate(matrices, -3.25F, 0.9F, -1.35F); */
 		} else {
 			toggle();
 		}
@@ -43,10 +42,10 @@ public class Inspect extends Module {
 
 	public void rotate(MatrixStack matrix, final float pitch, final float yaw, final float roll) {
 		matrix.translate((double) (-8.0F / 16.0F) + 0.35F, (double) (-8.0F / 16.0F) + 0.75F, (double) (-8.0F / 16.0F));
-//		matrix.translate((double) (-8.0F / 16.0F) + 0.3F, (double) (-8.0F / 16.0F) + 0.6F, (double) (-8.0F / 16.0F));
-//		matrix.translate((double) (-8.0F / 16.0F) + 0.2F, (double) (-8.0F / 16.0F) - 0.3F, (double) (-8.0F / 16.0F) - 0.9F);
-//		matrix.translate((double) (-8.0F / 16.0F) + 0.6F, (double) (-8.0F / 16.0F) + 0.75F, (double) (-8.0F / 16.0F) + 0.0F);
-//		matrix.translate((double) (-8.0F / 16.0F) + 0.2F, (double) (-8.0F / 16.0F) + 0.9F, (double) (-8.0F / 16.0F) - 0.3F);
+/*		matrix.translate((double) (-8.0F / 16.0F) + 0.3F, (double) (-8.0F / 16.0F) + 0.6F, (double) (-8.0F / 16.0F));
+		matrix.translate((double) (-8.0F / 16.0F) + 0.2F, (double) (-8.0F / 16.0F) - 0.3F, (double) (-8.0F / 16.0F) - 0.9F);
+		matrix.translate((double) (-8.0F / 16.0F) + 0.6F, (double) (-8.0F / 16.0F) + 0.75F, (double) (-8.0F / 16.0F) + 0.0F);
+		matrix.translate((double) (-8.0F / 16.0F) + 0.2F, (double) (-8.0F / 16.0F) + 0.9F, (double) (-8.0F / 16.0F) - 0.3F); */
 		if (roll != 0.0F) {
 			matrix.multiply(Vector3f.POSITIVE_Z.getRadialQuaternion(roll));
 		}
