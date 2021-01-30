@@ -16,7 +16,7 @@ public class Inspect extends Module {
 	private float move;
 
 	public Inspect() {
-		super("Inspect", ModuleCategory.RENDER, true);
+		super("Inspect", ModuleCategory.RENDER, false);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class Inspect extends Module {
 	}
 
 	public void render(final MatrixStack matrices, final boolean leftHanded) {
-		if (distance < 1600.0F) {
+		if (distance < 30.0F) {
 			distance += 0.005F;
 			final float f = MathHelper.sin((3.1415F / 2) * distance);
 			if (move < 22.5F) {
