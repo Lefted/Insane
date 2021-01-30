@@ -25,6 +25,11 @@ public class Inspect extends Module {
 		move = 0.0F;
 	}
 
+	@Override
+	public void toggle() {
+		enable();
+	}
+
 	public void render(final MatrixStack matrices, final boolean leftHanded) {
 		if (distance < 30.0F) {
 			distance += 0.005F;
@@ -45,13 +50,13 @@ public class Inspect extends Module {
 			// -Pivot
 			matrices.translate(-pivotX, -pivotY, -pivotZ);
 		} else {
-			toggle();
+			disable();
 		}
 	}
-	
+
 	public void disable(final float swingProgress, final float equipProgress) {
 		if (swingProgress != 0F || equipProgress != 0F) {
-			toggle();
+			disable();
 		}
 	}
 }

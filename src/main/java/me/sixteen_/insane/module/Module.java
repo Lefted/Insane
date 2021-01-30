@@ -62,6 +62,16 @@ public abstract class Module {
 		return visible;
 	}
 	
+	protected void enable() {
+		enabled = true;
+		onEnable();
+	}
+	
+	protected void disable() {
+		enabled = false;
+		onDisable();
+	}
+	
 	protected void onEnable() {
 	}
 
