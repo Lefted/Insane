@@ -30,7 +30,7 @@ public class Inspect extends Module {
 		enable();
 	}
 
-	public void render(final MatrixStack matrices, final boolean leftHanded) {
+	public void render(final MatrixStack matrices) {
 		if (distance < 30.0F) {
 			distance += 0.005F;
 			final float f = MathHelper.sin((3.1415F / 2) * distance);
