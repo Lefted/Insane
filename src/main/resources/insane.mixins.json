@@ -7,7 +7,7 @@
   "client": [
   	"InGameHudMixin",
   	"ScreenMixin",
-  	"HeldItemRendererMixin",
+  	"ItemRendererMixin",
   	"MinecraftClientMixin",
     "KeyboardMixin"
   ],

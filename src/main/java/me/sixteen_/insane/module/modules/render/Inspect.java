@@ -5,6 +5,7 @@ import me.sixteen_.insane.module.ModuleCategory;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Quaternion;
 
 /**
  * @author Steffen
@@ -12,6 +13,7 @@ import net.minecraft.util.math.MathHelper;
 public class Inspect extends Module {
 
 	private float distance;
+	private float move;
 
 	public Inspect() {
 		super("Inspect", ModuleCategory.RENDER, true);
@@ -20,36 +22,36 @@ public class Inspect extends Module {
 	@Override
 	protected void onEnable() {
 		distance = 0.0F;
+		move = 0.0F;
 	}
 
-	public void render(final float swingProgress, final float equipProgress, final MatrixStack matrices) {
-		if (swingProgress == 0.0F && equipProgress == 0.0F && distance < 30.0F) {
+	public void render(final MatrixStack matrices, final boolean leftHanded) {
+		if (distance < 1600.0F) {
 			distance += 0.005F;
-			float f = MathHelper.sin(distance);
-			rotate(matrices, 0.0F + (f / 48.0F), 1.8F, 1.8F);
-/*			rotate(matrices, -1.8F, 1.35F, 0.0F);
-			rotate(matrices, 0.9F, -1.575F, 0.225F);
-			rotate(matrices, -0.9F, 1.8F, 0.9F);
-			rotate(matrices, -3.25F, 0.9F, -1.35F); */
+			final float f = MathHelper.sin((3.1415F / 2) * distance);
+			if (move < 22.5F) {
+				move = f * 22.5F;
+			}
+			final float pivotX = 1.0F;
+			final float pivotY = 1.0F;
+			final float pivotZ = 0.5F;
+			// Destination
+			matrices.translate(0F, 0F, 0F);
+			matrices.multiply(new Quaternion(0F, 0F, move, true));
+			// Pivot
+			matrices.translate(pivotX, pivotY, pivotZ);
+			// Rotate
+			matrices.multiply(new Quaternion(new Vector3f(1F, 1F, 0F), 30F * f, true));
+			// -Pivot
+			matrices.translate(-pivotX, -pivotY, -pivotZ);
 		} else {
 			toggle();
 		}
 	}
-
-	public void rotate(MatrixStack matrix, final float pitch, final float yaw, final float roll) {
-		matrix.translate((double) (-8.0F / 16.0F) + 0.35F, (double) (-8.0F / 16.0F) + 0.75F, (double) (-8.0F / 16.0F));
-/*		matrix.translate((double) (-8.0F / 16.0F) + 0.3F, (double) (-8.0F / 16.0F) + 0.6F, (double) (-8.0F / 16.0F));
-		matrix.translate((double) (-8.0F / 16.0F) + 0.2F, (double) (-8.0F / 16.0F) - 0.3F, (double) (-8.0F / 16.0F) - 0.9F);
-		matrix.translate((double) (-8.0F / 16.0F) + 0.6F, (double) (-8.0F / 16.0F) + 0.75F, (double) (-8.0F / 16.0F) + 0.0F);
-		matrix.translate((double) (-8.0F / 16.0F) + 0.2F, (double) (-8.0F / 16.0F) + 0.9F, (double) (-8.0F / 16.0F) - 0.3F); */
-		if (roll != 0.0F) {
-			matrix.multiply(Vector3f.POSITIVE_Z.getRadialQuaternion(roll));
-		}
-		if (yaw != 0.0F) {
-			matrix.multiply(Vector3f.POSITIVE_Y.getRadialQuaternion(yaw));
-		}
-		if (pitch != 0.0F) {
-			matrix.multiply(Vector3f.POSITIVE_X.getRadialQuaternion(pitch));
+	
+	public void disable(final float swingProgress, final float equipProgress) {
+		if (swingProgress != 0F || equipProgress != 0F) {
+			toggle();
 		}
 	}
 }
