@@ -5,11 +5,12 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [],
   "client": [
+  	"HeldItemRendererMixin",
   	"InGameHudMixin",
-  	"ScreenMixin",
   	"ItemRendererMixin",
+  	"KeyboardMixin",
   	"MinecraftClientMixin",
-    "KeyboardMixin"
+    "ScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
