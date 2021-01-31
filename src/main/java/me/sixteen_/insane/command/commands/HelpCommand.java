@@ -32,6 +32,9 @@ public class HelpCommand extends Command {
 				for(final Module m : insane.getModuleManager().getModules()) {
 					message.add(m.getName());
 				}
+			} else {
+				message.add(String.format("%s is an invalid parameter", param[1]));
+				throw new Exception();
 			}
 		} catch (Exception e) {
 			message.add(".help command | .help module");
