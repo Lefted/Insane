@@ -27,7 +27,7 @@ public class Inspect extends Module {
 
 	@Override
 	public void toggle() {
-		enable();
+		onEnable();
 	}
 
 	public void render(final MatrixStack matrices) {
