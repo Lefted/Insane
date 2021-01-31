@@ -30,7 +30,7 @@ public class Inspect extends Module {
 		onEnable();
 	}
 
-	public void render(final MatrixStack matrices) {
+	public void onUpdate(final MatrixStack matrices) {
 		if (distance < 30.0F) {
 			distance += 0.005F;
 			final float f = MathHelper.sin((3.1415F / 2) * distance);

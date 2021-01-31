@@ -24,7 +24,7 @@ public class SprintStatus extends Module {
 		tr = mc.textRenderer;
 	}
 
-	public void render(final MatrixStack matrices) {
+	public void onUpdate(final MatrixStack matrices) {
 		String status;
 		if (mc.options.sprintToggled && mc.options.keySprint.isPressed()) {
 			status = "Toggled";

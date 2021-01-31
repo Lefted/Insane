@@ -1,6 +1,7 @@
 package me.sixteen_.insane.module;
 
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.client.util.math.MatrixStack;
 
 /**
  * @author 16_
@@ -72,12 +73,8 @@ public abstract class Module {
 		onDisable();
 	}
 	
-	protected void onEnable() {
-	}
-
-	protected void onDisable() {
-	}
-	
-	protected void onShutdown() {
-	}
+	public void onUpdate() {}
+	protected void onEnable() {}
+	protected void onDisable() {}
+	protected void onShutdown() {}
 }

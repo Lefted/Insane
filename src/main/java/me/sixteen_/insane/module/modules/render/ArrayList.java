@@ -48,7 +48,7 @@ public class ArrayList extends Module {
 		sortModules();
 	}
 
-	public void render(final MatrixStack matrices) {
+	public void onUpdate(final MatrixStack matrices) {
 		int h = 0;
 		for (Module m : modules) {
 			if (m.isEnabled() && m.isVisible()) {

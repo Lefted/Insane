@@ -24,10 +24,10 @@ public class InGameHudMixin {
 		final ArrayList arrayList = (ArrayList) mm.getModule(ArrayList.class);
 		final SprintStatus sprintStatus = (SprintStatus) mm.getModule(SprintStatus.class);
 		if (arrayList.isEnabled()) {
-			arrayList.render(matrices);
+			arrayList.onUpdate(matrices);
 		}
 		if (sprintStatus.isEnabled()) {
-			sprintStatus.render(matrices);
+			sprintStatus.onUpdate(matrices);
 		}
 	}
 }

@@ -25,7 +25,7 @@ public class ItemRendererMixin {
 	private void onRenderItem(ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel model, final CallbackInfo info) {
 		final Inspect inspect = (Inspect) Insane.getInsane().getModuleManager().getModule(Inspect.class);
 		if (inspect.isEnabled() && renderMode.isFirstPerson()) {
-			inspect.render(matrices);
+			inspect.onUpdate(matrices);
 		}
 	}
 }
