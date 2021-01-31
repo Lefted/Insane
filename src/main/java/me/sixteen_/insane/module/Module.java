@@ -1,7 +1,6 @@
 package me.sixteen_.insane.module;
 
 import net.minecraft.client.util.InputUtil;
-import net.minecraft.client.util.math.MatrixStack;
 
 /**
  * @author 16_
@@ -22,8 +21,8 @@ public abstract class Module {
 		keybind = InputUtil.UNKNOWN_KEY;
 	}
 
-	public Module(final String moduleName, final ModuleCategory moduleCategory, final boolean visible) {
-		this.visible = visible;
+	public Module(final String moduleName, final ModuleCategory moduleCategory, final boolean moduleVisible) {
+		visible = moduleVisible;
 		enabled = false;
 		category = moduleCategory;
 		name = moduleName;

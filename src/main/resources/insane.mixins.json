@@ -10,6 +10,7 @@
   	"ItemRendererMixin",
   	"KeyboardMixin",
   	"MinecraftClientMixin",
+  	"PlayerEntityMixin",
     "ScreenMixin"
   ],
   "injectors": {

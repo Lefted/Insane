@@ -13,7 +13,7 @@ import net.minecraft.client.MinecraftClient;
  */
 @Mixin(MinecraftClient.class)
 public class MinecraftClientMixin {
-
+	
 	@Inject(method = "<init>", at = @At("RETURN"))
 	private void init(final CallbackInfo info) {
 		new Insane();
