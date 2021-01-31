@@ -25,10 +25,12 @@ public class HelpCommand extends Command {
 		try {
 			insane = Insane.getInsane();
 			if (param[1].equalsIgnoreCase("command")) {
+				message.add("Commands:");
 				for(final Command c : insane.getCommandManager().getCommands()) {
 					message.add(c.getName()[0]);
 				}
 			} else if (param[1].equalsIgnoreCase("module")) {
+				message.add("Modules:");
 				for(final Module m : insane.getModuleManager().getModules()) {
 					message.add(m.getName());
 				}
