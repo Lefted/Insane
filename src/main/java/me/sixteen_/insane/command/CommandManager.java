@@ -3,6 +3,7 @@ package me.sixteen_.insane.command;
 import java.util.List;
 
 import me.sixteen_.insane.command.commands.BindCommand;
+import me.sixteen_.insane.command.commands.HelpCommand;
 import me.sixteen_.insane.command.commands.ToggleCommand;
 import me.sixteen_.insane.utils.Logger;
 
@@ -16,6 +17,7 @@ public class CommandManager {
 	public CommandManager() {
 		addCommand(new ToggleCommand());
 		addCommand(new BindCommand());
+		addCommand(new HelpCommand());
 	}
 
 	private void addCommand(final Command cmd) {
@@ -26,6 +28,10 @@ public class CommandManager {
 		String[] cmd = input.substring(1).split(" ");
 		runCommand(cmd);
 	}
+	
+	public List<Command> getCommands() {
+		return commands;
+	}
 
 	private void runCommand(final String... cmd) {
 		for (Command c : commands) {
@@ -34,7 +40,7 @@ public class CommandManager {
 					try {
 						c.runCommand(cmd);
 					} catch (Exception e) {
-						Logger.getLogger().addChatMessage("Could not run command!");
+						Logger.getLogger().addChatMessage("Could not run command!", true);
 					}
 					return;
 				}

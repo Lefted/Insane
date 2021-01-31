@@ -11,7 +11,7 @@ import net.minecraft.client.util.InputUtil;
 public class BindCommand extends Command {
 
 	public BindCommand() {
-		super("b", "bind");
+		super("bind", "b");
 	}
 
 	@Override
