@@ -16,7 +16,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 
 /**
- * @author Steffen
+ * @author 16_
  */
 @Mixin(ItemRenderer.class)
 public class ItemRendererMixin {

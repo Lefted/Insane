@@ -15,7 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 
 /**
- * @author Steffen
+ * @author 16_
  */
 @Mixin(HeldItemRenderer.class)
 public class HeldItemRendererMixin {

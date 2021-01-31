@@ -9,7 +9,7 @@ import me.sixteen_.insane.module.Module;
 import me.sixteen_.insane.utils.Logger;
 
 /**
- * @author Steffen
+ * @author 16_
  */
 public class HelpCommand extends Command {
 	

@@ -12,7 +12,7 @@ import me.sixteen_.insane.module.ModuleManager;
 import net.minecraft.client.Keyboard;
 
 /**
- * @author Steffen
+ * @author 16_
  */
 @Mixin(Keyboard.class)
 public class KeyboardMixin {

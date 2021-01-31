@@ -9,7 +9,7 @@ import me.sixteen_.insane.Insane;
 import net.minecraft.client.MinecraftClient;
 
 /**
- * @author Steffen
+ * @author 16_
  */
 @Mixin(MinecraftClient.class)
 public class MinecraftClientMixin {

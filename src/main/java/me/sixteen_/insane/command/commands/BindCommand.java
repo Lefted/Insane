@@ -6,7 +6,7 @@ import me.sixteen_.insane.module.Module;
 import net.minecraft.client.util.InputUtil;
 
 /**
- * @author Steffen
+ * @author 16_
  */
 public class BindCommand extends Command {
 
