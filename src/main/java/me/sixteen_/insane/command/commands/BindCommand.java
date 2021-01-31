@@ -17,7 +17,12 @@ public class BindCommand extends Command {
 	@Override
 	public void runCommand(final String... param) {
 		final Module m = Insane.getInsane().getModuleManager().getModuleByName(param[1]);
-		final InputUtil.Key key = InputUtil.fromTranslationKey(String.format("key.keyboard.%s", param[2].toLowerCase()));
+		InputUtil.Key key;
+		if (param[2].equalsIgnoreCase("none")) {
+			key = InputUtil.UNKNOWN_KEY;
+		} else {
+			key = InputUtil.fromTranslationKey(String.format("key.keyboard.%s", param[2].toLowerCase()));
+		}
 		m.setKeybind(key);
 	}
 }
