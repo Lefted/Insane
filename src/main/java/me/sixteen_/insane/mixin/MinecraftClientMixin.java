@@ -12,7 +12,7 @@ import net.minecraft.client.MinecraftClient;
  * @author 16_
  */
 @Mixin(MinecraftClient.class)
-public class MinecraftClientMixin {
+public abstract class MinecraftClientMixin {
 	
 	@Inject(method = "<init>", at = @At("RETURN"))
 	private void init(final CallbackInfo info) {

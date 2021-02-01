@@ -12,7 +12,7 @@ import net.minecraft.client.gui.screen.Screen;
  * @author 16_
  */
 @Mixin(Screen.class)
-public class ScreenMixin {
+public abstract class ScreenMixin {
 
 	@Inject(method = "sendMessage(Ljava/lang/String;Z)V", at = @At("HEAD"), cancellable = true)
 	private void sendMessage(String message, boolean toHud, final CallbackInfo info) {

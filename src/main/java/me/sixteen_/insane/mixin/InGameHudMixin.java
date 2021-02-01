@@ -16,7 +16,7 @@ import net.minecraft.client.util.math.MatrixStack;
  * @author 16_
  */
 @Mixin(InGameHud.class)
-public class InGameHudMixin {
+public abstract class InGameHudMixin {
 
 	@Inject(method = "render", at = @At("HEAD"))
 	private void render(MatrixStack matrices, float tickDelta, final CallbackInfo info) {

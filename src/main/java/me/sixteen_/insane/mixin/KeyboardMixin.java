@@ -15,7 +15,7 @@ import net.minecraft.client.Keyboard;
  * @author 16_
  */
 @Mixin(Keyboard.class)
-public class KeyboardMixin {
+public abstract class KeyboardMixin {
 
 	@Inject(method = "onKey", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/util/InputUtil;fromKeyCode(II)Lnet/minecraft/client/util/InputUtil$Key;", shift = At.Shift.AFTER))
 	private void onKey(long window, int key, int scancode, int i, int j, final CallbackInfo callback) {

@@ -18,7 +18,7 @@ import net.minecraft.util.Hand;
  * @author 16_
  */
 @Mixin(HeldItemRenderer.class)
-public class HeldItemRendererMixin {
+public abstract class HeldItemRendererMixin {
 
 	@Inject(method = "renderFirstPersonItem", at = @At("HEAD"))
 	private void renderFirstPersonItem(AbstractClientPlayerEntity player, float tickDelta, float pitch, Hand hand, float swingProgress, ItemStack item, float equipProgress, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, final CallbackInfo info) {
