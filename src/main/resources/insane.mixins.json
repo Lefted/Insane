@@ -11,7 +11,8 @@
   	"ItemRendererMixin",
   	"KeyboardMixin",
   	"MinecraftClientMixin",
-    "ScreenMixin"
+    "ScreenMixin",
+    "LivingEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
